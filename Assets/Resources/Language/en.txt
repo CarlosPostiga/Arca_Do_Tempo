@@ -1,0 +1,3 @@
+﻿start=Start
+options=Options
+exit=Exit
