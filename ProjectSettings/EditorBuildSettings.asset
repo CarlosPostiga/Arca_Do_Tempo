@@ -12,8 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: ff8e401957217eb45b87a093588a3f1f
   - enabled: 1
+    path: Assets/Scenes/LabirintScene.unity
+    guid: accb2bf3fd83c9c43bc81d60c858ef11
+  - enabled: 1
     path: Assets/Scenes/PuzzelGame.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/LabirintScene2.unity
+    guid: 41f334d387441d64f917bda0dceecb78
   - enabled: 1
     path: Assets/Scenes/SquenceGame.unity
     guid: eb51ecd2361e7e94db1d5935ef355d26

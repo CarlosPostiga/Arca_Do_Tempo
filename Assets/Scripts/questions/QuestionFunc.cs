@@ -7,9 +7,13 @@ public class QuestionFunc : MonoBehaviour
 {
     public TextMeshProUGUI textDisplay;
     public string[] sentences;
-    private int index;
+    public string[] awnsers;
+    public int index;
     public float typingSpeed;
     public GameObject PlaceHolder;
+    public GameObject InteractText;
+    public GameObject[] Barrears;
+    string anwserGiven; 
 
     public void StartDialog()
     {
@@ -24,6 +28,27 @@ public class QuestionFunc : MonoBehaviour
             textDisplay.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
-
     }
+    public void CheckAnwser(GetAnsewr anwersplace)
+    {
+        anwersplace.getAnwser();
+        anwserGiven = anwersplace.anwser;
+        if (anwserGiven == awnsers[index])
+        {
+            PlaceHolder.SetActive(false);
+            InteractText.SetActive(false);
+            foreach (GameObject barrear in Barrears)
+            {
+                if (barrear.GetComponent<indexBarrear>().Index == index)
+                {
+                    barrear.SetActive(false);
+                    break;  
+                }
+            }
+            index++;
+        }
+        
+    }
+
+
 }

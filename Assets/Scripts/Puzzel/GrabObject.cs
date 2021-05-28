@@ -43,15 +43,17 @@ public class GrabObject : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-
-        if (objectPart.AskNeighboor(collision.gameObject))
+        if (collision.transform.GetComponent<Part>() != null)
         {
-            listOfPlaced.AddInplace(collision.gameObject);
-            listOfPlaced.AddInplace(this.gameObject);
-        }
-        if (listOfPlaced.CheckWin())
-        {
-            youWin.SetActive(true);
+            if (objectPart.AskNeighboor(collision.gameObject))
+            {
+                listOfPlaced.AddInplace(collision.gameObject);
+                listOfPlaced.AddInplace(this.gameObject);
+            }
+            if (listOfPlaced.CheckWin())
+            {
+                youWin.SetActive(true);
+            }
         }
     }
 
