@@ -15,7 +15,7 @@ public class PlaceManager : MonoBehaviour
     }
     public bool CheckWin()
     {
-        if (numberOfPieces == InPlace.Count)
+        if (12 == InPlace.Count)
         {
             return true;
         }

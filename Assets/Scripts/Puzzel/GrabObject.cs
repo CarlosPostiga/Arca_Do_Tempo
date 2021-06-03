@@ -10,6 +10,7 @@ public class GrabObject : MonoBehaviour
     public GameObject youWin;
     public Part objectPart;
     public PlaceManager listOfPlaced;
+    public LevelLoader NextLevel;
 
     private void Start()
     {
@@ -53,6 +54,8 @@ public class GrabObject : MonoBehaviour
             if (listOfPlaced.CheckWin())
             {
                 youWin.SetActive(true);
+                NextLevel.LoadNextLevel();
+
             }
         }
     }

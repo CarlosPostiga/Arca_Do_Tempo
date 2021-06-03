@@ -22,7 +22,7 @@ public class AppearPDA : MonoBehaviour
         PDA = GetComponent<Image>();
         show = false;
         hide = true;
-        PDA.rectTransform.anchoredPosition = new  Vector2(0, -Screen.height);
+        PDA.rectTransform.anchoredPosition = new Vector2(0, -Screen.height);
     }
     // Update is called once per frame
     void Update()
@@ -50,7 +50,10 @@ public class AppearPDA : MonoBehaviour
             turnOnOff2.TurnOnAllColors();
             turnOnOff3.TurnOnAllColors();
             PDA.rectTransform.anchoredPosition = Vector2.MoveTowards(PDA.rectTransform.anchoredPosition, Vector2.zero, speed);
-            miniMap.SetActive(false);
+            if (miniMap != null)
+            {
+                miniMap.SetActive(false);
+            }
 
         }
         if (hide)
@@ -59,7 +62,11 @@ public class AppearPDA : MonoBehaviour
             turnOnOff2.TurnOffAllColors();
             turnOnOff3.TurnOffAllColors();
             PDA.rectTransform.anchoredPosition = Vector2.MoveTowards(PDA.rectTransform.anchoredPosition, new Vector2(0, -Screen.height), speed);
-            miniMap.SetActive(true);
+            if (miniMap != null)
+            {
+                miniMap.SetActive(true);
+            }
+
         }
     }
 

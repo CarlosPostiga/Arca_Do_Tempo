@@ -13,6 +13,8 @@ public class Anwsers : MonoBehaviour
     public GameObject door;
     public GameObject triger;
     public GameObject doorFrame;
+    public GameObject water;
+    public float waterHight;
 
     private void Start()
     {
@@ -24,6 +26,7 @@ public class Anwsers : MonoBehaviour
         Ansers.Add(5);
         Ansers.Add(2);
         Ansers.Add(1);
+        waterHight = water.transform.position.y;
     }
     private void Update()
     {
@@ -32,10 +35,15 @@ public class Anwsers : MonoBehaviour
             CheckAwnser();
             if (WinGame)
             {
-                wingameView.SetActive(true);
-                door.SetActive(false);
+
+                StartCoroutine(winText());
+                if (waterHight > -50)
+                {
+                    StartCoroutine(DrainWater());
+                }
                 Destroy(triger.GetComponent<BoxCollider>());
                 Destroy(doorFrame.GetComponent<BoxCollider>());
+
             }
             else
             {
@@ -58,4 +66,21 @@ public class Anwsers : MonoBehaviour
             }
         }
     }
+    IEnumerator DrainWater ()
+    {
+        waterHight-= .002f;
+        water.transform.position = new Vector3(water.transform.position.x,waterHight, water.transform.position.z );
+        yield return new WaitForSeconds(1f);
+    }
+    IEnumerator winText()
+    {
+        wingameView.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        Ansers.Clear();
+        door.SetActive(false);
+        wingameView.SetActive(false);
+        WinGame = false;
+
+    }
+
 }
