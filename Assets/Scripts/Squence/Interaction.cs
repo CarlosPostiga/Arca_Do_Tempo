@@ -20,5 +20,9 @@ public class Interaction : MonoBehaviour
                 interact = true;
             }
         }
+        else
+        {
+            interectionText.SetActive(false);
+        }
     }
 }

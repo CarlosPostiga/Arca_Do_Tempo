@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Interact : MonoBehaviour
 {
-    public Image InteractImage;
+    public GameObject InteractImage;
     public bool interaction = false;
 
     private void OnTriggerEnter(Collider other)
@@ -23,7 +23,7 @@ public class Interact : MonoBehaviour
          interaction = other.GetComponent<Interaction>().interact;
             if (interaction)
             {
-                InteractImage.enabled = true;
+                InteractImage.SetActive(true);
                 other.GetComponent<Interaction>().interactionPossible = false;
                 other.GetComponent<Interaction>().interectionText.SetActive(false);
             }
@@ -33,9 +33,9 @@ public class Interact : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            InteractImage.enabled = false;
+            InteractImage.SetActive(false);
             interaction = false;
-            other.GetComponent<Interaction>().interact = interaction;
+            other.GetComponent<Interaction>().interactionPossible = interaction;
         }
     }
     public void interact()
