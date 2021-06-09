@@ -10,7 +10,7 @@ public class AppearPDA : MonoBehaviour
     public ChangeCollor turnOnOff1;
     public ChangeCollor turnOnOff2;
     public ChangeCollor turnOnOff3;
-    public GameObject miniMap;
+    public GameObject[] Pecas;
 
     float speed = 50.0f;
 
@@ -50,10 +50,14 @@ public class AppearPDA : MonoBehaviour
             turnOnOff2.TurnOnAllColors();
             turnOnOff3.TurnOnAllColors();
             PDA.rectTransform.anchoredPosition = Vector2.MoveTowards(PDA.rectTransform.anchoredPosition, Vector2.zero, speed);
-            if (miniMap != null)
+            for (int i = 0; i < Pecas.Length; i++)
             {
-                miniMap.SetActive(false);
+                if (Pecas[i] != null)
+                {
+                    Pecas[i].SetActive(false);
+                }
             }
+
 
         }
         if (hide)
@@ -62,9 +66,12 @@ public class AppearPDA : MonoBehaviour
             turnOnOff2.TurnOffAllColors();
             turnOnOff3.TurnOffAllColors();
             PDA.rectTransform.anchoredPosition = Vector2.MoveTowards(PDA.rectTransform.anchoredPosition, new Vector2(0, -Screen.height), speed);
-            if (miniMap != null)
+            for (int i = 0; i < Pecas.Length; i++)
             {
-                miniMap.SetActive(true);
+                if (Pecas[i] != null)
+                {
+                    Pecas[i].SetActive(true);
+                }
             }
 
         }

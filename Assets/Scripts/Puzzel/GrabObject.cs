@@ -10,8 +10,9 @@ public class GrabObject : MonoBehaviour
     public GameObject youWin;
     public Part objectPart;
     public PlaceManager listOfPlaced;
-    public LevelLoader NextLevel;
-
+    public GameObject PoteFinal;
+    public GameObject[] pecas;
+    public bool win = false;
     private void Start()
     {
         objectPart = this.GetComponent<Part>();
@@ -46,6 +47,7 @@ public class GrabObject : MonoBehaviour
     {
         if (collision.transform.GetComponent<Part>() != null)
         {
+            
             if (objectPart.AskNeighboor(collision.gameObject))
             {
                 listOfPlaced.AddInplace(collision.gameObject);
@@ -53,9 +55,8 @@ public class GrabObject : MonoBehaviour
             }
             if (listOfPlaced.CheckWin())
             {
-                youWin.SetActive(true);
-                NextLevel.LoadNextLevel();
-
+                StartCoroutine(Win());
+                listOfPlaced.numberOfPieces = 100;
             }
         }
     }
@@ -70,6 +71,19 @@ public class GrabObject : MonoBehaviour
 
         // Convert it to world points
         return Camera.main.ScreenToWorldPoint(mousePoint);
+
+    }
+    IEnumerator Win()
+    {
+        youWin.SetActive(true);
+        win = false;
+        yield return new WaitForSeconds(1f);
+        PoteFinal.SetActive(true);
+        youWin.SetActive(false);
+        for (int i = 0; i < pecas.Length; i++)
+        {
+            pecas[i].SetActive(false);
+        }
 
     }
 }

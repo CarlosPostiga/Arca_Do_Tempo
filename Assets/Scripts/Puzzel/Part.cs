@@ -18,55 +18,33 @@ public class Part : MonoBehaviour
         {
             if (!temp.inplace)
             {
-                if (id + 1 == temp.id && id < 4)
+                if (id + 1 == temp.id && id < 2)
                 {
                     neigbor.transform.rotation = Quaternion.Euler(-90,0,0);
                     this.transform.rotation = Quaternion.Euler(-90, 0, 0);
-                    neigbor.transform.position = new Vector3(this.transform.position.x - 0.062f, this.transform.position.y, this.transform.position.z);
+                    neigbor.transform.position = new Vector3(this.transform.position.x - 0.12f, this.transform.position.y, this.transform.position.z);
                     neigbor.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                     this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                     inplace = true;
                     temp.inplace = true;
                     return true;
                 }
-                else if (temp.id > 4 && temp.id <= 8 && id + 4 == temp.id)
+                else if (temp.id > 2 && temp.id <= 4 && id + 2 == temp.id)
                 {
                     neigbor.transform.rotation = Quaternion.Euler(-90, 0, 0);
                     this.transform.rotation = Quaternion.Euler(-90, 0, 0);
-                    neigbor.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 0.062f);
+                    neigbor.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 0.12f);
                     neigbor.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                     this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                     inplace = true;
                     temp.inplace = true;
                     return true;
                 }
-                else if (temp.id > 8 && temp.id <= 12 && id + 4 == temp.id)
+                else if (temp.id > 4 && id + 4 == temp.id)
                 {
                     neigbor.transform.rotation = Quaternion.Euler(-90, 0, 0);
                     this.transform.rotation = Quaternion.Euler(-90, 0, 0);
-                    neigbor.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 0.062f);
-                    neigbor.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                    this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                    inplace = true;
-                    temp.inplace = true;
-                    return true;
-                }
-                else if (temp.id > 12 && temp.id <= 16 && id + 4 == temp.id)
-                {
-                    neigbor.transform.rotation = Quaternion.Euler(-90, 0, 0);
-                    this.transform.rotation = Quaternion.Euler(-90, 0, 0);
-                    neigbor.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 0.062f);
-                    neigbor.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                    this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                    inplace = true;
-                    temp.inplace = true;
-                    return true;
-                }
-                else if (temp.id > 16 && id + 16 == temp.id)
-                {
-                    neigbor.transform.rotation = Quaternion.Euler(-90, 0, 0);
-                    this.transform.rotation = Quaternion.Euler(-90, 0, 0);
-                    neigbor.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.062f, this.transform.position.z);
+                    neigbor.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.12f, this.transform.position.z);
                     neigbor.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                     this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                     inplace = true;
@@ -77,7 +55,7 @@ public class Part : MonoBehaviour
                 {
                     neigbor.transform.rotation = Quaternion.Euler(-90, 0, 0);
                     this.transform.rotation = Quaternion.Euler(-90, 0, 0);
-                    neigbor.transform.position = new Vector3(this.transform.position.x + 0.062f, this.transform.position.y, this.transform.position.z);
+                    neigbor.transform.position = new Vector3(this.transform.position.x + 0.12f, this.transform.position.y, this.transform.position.z);
                     neigbor.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                     this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                     inplace = true;

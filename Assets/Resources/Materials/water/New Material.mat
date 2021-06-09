@@ -73,11 +73,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NormalA:
         m_Texture: {fileID: 2800000, guid: 6f3587eb7af89234a9aebd8af8727d6d, type: 3}
-        m_Scale: {x: 0.5, y: 0.5}
+        m_Scale: {x: 1, y: 0.5}
         m_Offset: {x: 0, y: 0}
     - _NormalB:
         m_Texture: {fileID: 2800000, guid: 1568907f534ce564e9c8f092dc3e2b06, type: 3}
-        m_Scale: {x: 0.5, y: 0.5}
+        m_Scale: {x: 1, y: 0.5}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
@@ -88,8 +88,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RenderTexture:
-        m_Texture: {fileID: 2800000, guid: 6e98708b87b97d94aa4b1298ecfc935a, type: 3}
-        m_Scale: {x: 0.0001, y: 0.0001}
+        m_Texture: {fileID: 2800000, guid: 5b0016abd3fb2d04d827a9f9ce3f2845, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Amount: 0.41
@@ -98,23 +98,23 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Foam: 1.19
-    - _FoamIntensity: -0.36
-    - _FoamLinesSpeed: 0.001
+    - _FoamIntensity: 0.12
+    - _FoamLinesSpeed: 0.93
     - _FoamTextureSpeedX: 0.1
-    - _FoamTextureSpeedY: 0
-    - _FoamThreshold: 1.66
-    - _FogThreshold: 0.05
-    - _FresnelPower: -2
+    - _FoamTextureSpeedY: 0.36
+    - _FoamThreshold: 13.99
+    - _FogThreshold: -5.23
+    - _FresnelPower: 8.88
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: 0.94
     - _GlossyReflections: 1
     - _Height: 0.228
-    - _IntersectionThreshold: 0.2
+    - _IntersectionThreshold: 0.25
     - _MaxTessellationDistance: 100
     - _Metallic: 0
     - _MinOffset: 0.117
     - _Mode: 0
-    - _NormalStrength: 0.15
+    - _NormalStrength: 1.14
     - _OcclusionStrength: 1
     - _OffsetAmount: 0.011
     - _Parallax: 0.02
@@ -138,10 +138,10 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamIntersectionProperties: {r: 2.66, g: 0.94, b: 0.64, a: 0.13}
     - _FoamProperties: {r: 0, g: -0.1, b: 0.34, a: 0.38}
-    - _FogColor: {r: 0.28401574, g: 0.54396236, b: 0.82316434, a: 1}
+    - _FogColor: {r: 0, g: 0.18349972, b: 0.3773585, a: 0.45490196}
     - _IntersectionColor: {r: 0.4247953, g: 0.66458917, b: 0.8113208, a: 1}
     - _NoiseAProperties: {r: 0, g: 0.05, b: 0.63, a: -1.51}
     - _NoiseBProperties: {r: 0, g: -0.02, b: 0.65, a: 0.54}
-    - _NormalPanningSpeeds: {r: 0.05, g: 0, b: 0.05, a: 0.05}
+    - _NormalPanningSpeeds: {r: 0.3, g: 0, b: 0.2, a: 0.5}
     - _ShoreColor: {r: 0.12156863, g: 1, b: 1, a: 0.7019608}
     - _Tint: {r: 1, g: 1, b: 1, a: 0.5}

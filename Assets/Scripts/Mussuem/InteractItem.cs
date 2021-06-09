@@ -27,7 +27,7 @@ public class InteractItem : MonoBehaviour
             notification.SetActive(false);
         }
     }
-
+    
     public void Interaction()
     {
         for (int i = 0; i < inventory.slots.Count; i++)
