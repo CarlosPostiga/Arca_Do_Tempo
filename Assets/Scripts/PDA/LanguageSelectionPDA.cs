@@ -20,9 +20,14 @@ public class LanguageSelectionPDA : MonoBehaviour
     {
         descritionButtonText.text = Lang.Fields["descricaoBotao"];
         inventoryButtonText.text = Lang.Fields["inventario"];
-        mapButtonText.text = Lang.Fields["mapa"];
+        
         Tittel1.text = Lang.Fields["titulo1"];
         Tittel2.text = Lang.Fields["titulo2"];
+        if (mapButtonText != null)
+        {
+            mapButtonText.text = Lang.Fields["mapa"];
+
+        }
         Tittel3.text = Lang.Fields["titulo3"];
         description1.text = Lang.Fields["Descricao1"];
         description2.text = Lang.Fields["Descricao2"];

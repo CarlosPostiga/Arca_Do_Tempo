@@ -65,7 +65,7 @@ public class AppearPDA : MonoBehaviour
             turnOnOff1.TurnOffAllColors();
             turnOnOff2.TurnOffAllColors();
             turnOnOff3.TurnOffAllColors();
-            PDA.rectTransform.anchoredPosition = Vector2.MoveTowards(PDA.rectTransform.anchoredPosition, new Vector2(0, -Screen.height), speed);
+            PDA.rectTransform.anchoredPosition = Vector2.MoveTowards(PDA.rectTransform.anchoredPosition, new Vector2(0, -Screen.height - 250), speed);
             for (int i = 0; i < Pecas.Length; i++)
             {
                 if (Pecas[i] != null)

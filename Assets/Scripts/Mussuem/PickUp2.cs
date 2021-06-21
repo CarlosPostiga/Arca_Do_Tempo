@@ -7,7 +7,6 @@ public class PickUp2 : MonoBehaviour
     public Inventory inventory;
     public GameObject me;
     public GameObject interactionText;
-    private LevelLoader nextLevel;
     public GameManager thisG;
 
     public float turnSpeed;

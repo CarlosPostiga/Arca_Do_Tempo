@@ -7,7 +7,9 @@ public class Anwsers : MonoBehaviour
 {
     public List<int> Ansers;
     public List<int> Squence;
-    bool WinGame = true;
+    bool WinGame = false;
+    bool TryAgain = false;
+    bool WaterLevel = false;
     public GameObject wingameView;
     public GameObject tryAgainView;
     public GameObject door;
@@ -35,19 +37,23 @@ public class Anwsers : MonoBehaviour
             CheckAwnser();
             if (WinGame)
             {
-
                 StartCoroutine(winText());
-                if (waterHight > -50)
-                {
-                    StartCoroutine(DrainWater());
-                }
+                WaterLevel = true;
                 Destroy(triger.GetComponent<BoxCollider>());
                 Destroy(doorFrame.GetComponent<BoxCollider>());
+                WinGame = false;
 
             }
-            else
+            else if(TryAgain)
             {
-                tryAgainView.SetActive(true);
+                StartCoroutine(TryAgainText());
+            }
+
+
+            if (WaterLevel)
+            {
+                waterHight -= 0.002f;
+                water.transform.position = new Vector3(water.transform.position.x, waterHight, water.transform.position.z);
             }
         }
     }
@@ -61,26 +67,37 @@ public class Anwsers : MonoBehaviour
         {
             if (Ansers[i] != Squence[i])
             {
-                WinGame = false;
+                TryAgain = true;
                 break;
+            }
+            else
+            {
+                WinGame = true;
             }
         }
     }
-    IEnumerator DrainWater ()
+    IEnumerator DrainWater()
     {
-        waterHight-= .002f;
-        water.transform.position = new Vector3(water.transform.position.x,waterHight, water.transform.position.z );
+        waterHight -= 0.02f;
+        water.transform.position = new Vector3(water.transform.position.x, waterHight, water.transform.position.z);
         yield return new WaitForSeconds(1f);
     }
     IEnumerator winText()
     {
         wingameView.SetActive(true);
         yield return new WaitForSeconds(5f);
-        Ansers.Clear();
-        door.SetActive(false);
+        Destroy(door);
+        Squence.Clear();
         wingameView.SetActive(false);
-        WinGame = false;
-
+        WaterLevel = false;
+    }
+    IEnumerator TryAgainText()
+    {
+        tryAgainView.SetActive(true);
+        Squence.Clear();
+        yield return new WaitForSeconds(5f);
+        TryAgain = false;
+        tryAgainView.SetActive(false);
     }
 
 }

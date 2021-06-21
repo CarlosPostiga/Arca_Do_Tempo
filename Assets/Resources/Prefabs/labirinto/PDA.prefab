@@ -863,9 +863,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -19}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
+  - {fileID: 5728235102459677694}
   - {fileID: 1327843756117002395}
   - {fileID: 1327843755907274257}
-  - {fileID: 5728235102459677694}
   - {fileID: 1327843754804628980}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -928,7 +928,7 @@ MonoBehaviour:
   turnOnOff1: {fileID: 6664165654578483704}
   turnOnOff2: {fileID: 6664165654107445353}
   turnOnOff3: {fileID: 6664165654365674131}
-  miniMap: {fileID: 0}
+  Pecas: []
   show: 0
   hide: 0
 --- !u!114 &7686249687436200302
@@ -983,7 +983,7 @@ RectTransform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 1327843755512369553}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1160,7 +1160,7 @@ RectTransform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 1327843755512369553}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1320,7 +1320,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1327843755512369553}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
