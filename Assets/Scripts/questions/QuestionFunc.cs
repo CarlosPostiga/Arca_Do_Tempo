@@ -18,6 +18,7 @@ public class QuestionFunc : MonoBehaviour
     public GameObject tryAgainText;
     public GameObject[] Barrears;
     string anwserGiven;
+    public GameObject[] Gates;
 
     private void Start()
     {
@@ -74,9 +75,9 @@ public class QuestionFunc : MonoBehaviour
             Ansewr2.text = "";
             Ansewr3.text = "";
             PlaceHolder.SetActive(false);
+            Gates[index / 4].transform.GetComponentInChildren<rotation>().startAnimation = true;
             Barrears[index / 4].SetActive(false);
             index += 4;
-            
         }
         else
         {
