@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class rotation : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class rotation : MonoBehaviour
     public bool startAnimation = false;
     public Animator firstGate;
     public Animator secondGate;
+    public AudioSource openGate;
+    public AudioSource openlock;
 
     void Update()
     {
@@ -21,8 +24,12 @@ public class rotation : MonoBehaviour
             }
             else
             {
+                openlock.Play();
+                openGate.Play();
+
                 firstGate.SetBool("rigt anser", true);
                 secondGate.SetBool("dooroppend", true);
+                startAnimation = false;
             }
 
 

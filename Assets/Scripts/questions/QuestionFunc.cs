@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using TMPro;
 
 public class QuestionFunc : MonoBehaviour
@@ -19,6 +20,7 @@ public class QuestionFunc : MonoBehaviour
     public GameObject[] Barrears;
     string anwserGiven;
     public GameObject[] Gates;
+    public AudioSource clicButon;
 
     private void Start()
     {
@@ -68,6 +70,7 @@ public class QuestionFunc : MonoBehaviour
         
         anwersplace.getAnwser();
         anwserGiven = anwersplace.anwser;
+        clicButon.Play();
         if (anwserGiven == awnsers[index / 4])
         {
             textDisplay.text = "";
