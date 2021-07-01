@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LabirintScene 2.unity
     guid: e0c433eae6a3f4e4781e70ae60e102bf
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 8f6f9aca33bacc345921d4f27a06ca62
   m_configObjects: {}

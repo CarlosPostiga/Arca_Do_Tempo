@@ -7,6 +7,7 @@ public class LAnguagePuzzel : MonoBehaviour
 {
     public TextMeshProUGUI Entertext;
     public TextMeshProUGUI Entertext2;
+    public TextMeshProUGUI Entertext3;
     public TextMeshProUGUI Wintext;
 
 
@@ -15,6 +16,7 @@ public class LAnguagePuzzel : MonoBehaviour
     {
         Entertext.text = Lang.Fields["PuzzelENtrence"];
         Entertext2.text = Lang.Fields["InteractText"];
+        Entertext3.text = Lang.Fields["WiningPuzzelText"];
         Wintext.text = Lang.Fields["WinText"];
     }
 }

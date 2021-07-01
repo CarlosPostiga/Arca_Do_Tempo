@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class GrabObject : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class GrabObject : MonoBehaviour
     public GameObject PoteFinal;
     public GameObject[] pecas;
     public bool win = false;
+    public AudioSource hitSound;
+    public GameObject placeHolder;
+    public GameObject text1;
+    public GameObject text2;
+
     private void Start()
     {
         objectPart = this.GetComponent<Part>();
@@ -52,6 +58,7 @@ public class GrabObject : MonoBehaviour
             {
                 listOfPlaced.AddInplace(collision.gameObject);
                 listOfPlaced.AddInplace(this.gameObject);
+                hitSound.Play();
             }
             if (listOfPlaced.CheckWin())
             {
@@ -80,6 +87,11 @@ public class GrabObject : MonoBehaviour
         yield return new WaitForSeconds(1f);
         PoteFinal.SetActive(true);
         youWin.SetActive(false);
+        placeHolder.SetActive(true);
+        text2.SetActive(true);
+        text1.SetActive(false);
+
+
         for (int i = 0; i < pecas.Length; i++)
         {
             pecas[i].SetActive(false);

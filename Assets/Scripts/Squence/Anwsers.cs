@@ -17,6 +17,9 @@ public class Anwsers : MonoBehaviour
     public GameObject doorFrame;
     public GameObject water;
     public float waterHight;
+    public GameObject placeObject;
+    public GameObject Winingtext;
+    public GameObject otherText;
 
     private void Start()
     {
@@ -89,6 +92,9 @@ public class Anwsers : MonoBehaviour
         Destroy(door);
         Squence.Clear();
         wingameView.SetActive(false);
+        placeObject.SetActive(true);
+        Winingtext.SetActive(true);
+        otherText.SetActive(false);
         WaterLevel = false;
     }
     IEnumerator TryAgainText()
