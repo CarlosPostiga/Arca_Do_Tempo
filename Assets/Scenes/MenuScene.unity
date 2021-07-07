@@ -447,7 +447,7 @@ PrefabInstance:
     - target: {fileID: 8414233362354477551, guid: 22ea1f358754cf644b03fa754e0c66e9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8414233362354477553, guid: 22ea1f358754cf644b03fa754e0c66e9, type: 3}
@@ -5760,7 +5760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -5836,8 +5836,6 @@ MonoBehaviour:
   Optiontitel: {fileID: 1874764241}
   OptionLinguagem: {fileID: 430006964}
   OptionGraficos: {fileID: 715570193}
-  OptionFullscrren: {fileID: 0}
-  OptionVolume: {fileID: 0}
   HowToPlaytitel: {fileID: 1205697091}
 --- !u!114 &1911464834
 MonoBehaviour:

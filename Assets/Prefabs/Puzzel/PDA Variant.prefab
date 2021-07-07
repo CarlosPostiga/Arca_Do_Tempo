@@ -127,6 +127,51 @@ PrefabInstance:
       propertyPath: m_Texture
       value: 
       objectReference: {fileID: 8400000, guid: 16b000df4709254499f94727c4dc4a0a, type: 2}
+    - target: {fileID: 2602755152828281669, guid: 2abd63a87136fff4f92e56e01871d17d,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602755152828281669, guid: 2abd63a87136fff4f92e56e01871d17d,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602755152828281669, guid: 2abd63a87136fff4f92e56e01871d17d,
+        type: 3}
+      propertyPath: m_fontSizeMin
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917617456316836503, guid: 2abd63a87136fff4f92e56e01871d17d,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917617456316836503, guid: 2abd63a87136fff4f92e56e01871d17d,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917617456316836503, guid: 2abd63a87136fff4f92e56e01871d17d,
+        type: 3}
+      propertyPath: m_fontSizeMin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5455796055030934906, guid: 2abd63a87136fff4f92e56e01871d17d,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5455796055030934906, guid: 2abd63a87136fff4f92e56e01871d17d,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5455796055030934906, guid: 2abd63a87136fff4f92e56e01871d17d,
+        type: 3}
+      propertyPath: m_fontSizeMin
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5595995242093280680, guid: 2abd63a87136fff4f92e56e01871d17d,
         type: 3}
       propertyPath: m_AnchorMax.x

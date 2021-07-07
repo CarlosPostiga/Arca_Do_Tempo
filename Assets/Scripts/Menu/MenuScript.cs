@@ -12,8 +12,6 @@ public class MenuScript : MonoBehaviour
     public TMP_Text Optiontitel;
     public TMP_Text OptionLinguagem;
     public TMP_Text OptionGraficos;
-    public TMP_Text OptionFullscrren;
-    public TMP_Text OptionVolume;
     public TMP_Text HowToPlaytitel;
 
     void Update()
@@ -25,8 +23,6 @@ public class MenuScript : MonoBehaviour
         Optiontitel.text = Lang.Fields["OptionsTitel"];
         OptionLinguagem.text = Lang.Fields["language"];
         OptionGraficos.text = Lang.Fields["Graphics"];
-        OptionFullscrren.text = Lang.Fields["FullScreen"];
-        OptionVolume.text = Lang.Fields["Volume"];
         HowToPlaytitel.text = Lang.Fields["HowToPlayTitel"];
     }
 }
