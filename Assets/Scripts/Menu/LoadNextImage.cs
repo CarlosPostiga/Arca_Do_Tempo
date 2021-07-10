@@ -14,7 +14,7 @@ public class LoadNextImage : MonoBehaviour
     }
     IEnumerator transactionCourotine()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         transaction.SetBool("start", true);
         yield return new WaitForSeconds(2f);
         transaction1.SetActive(false);
